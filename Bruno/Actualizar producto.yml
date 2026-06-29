@@ -1,0 +1,25 @@
+info:
+  name: Actualizar producto
+  type: http
+  seq: 9
+
+http:
+  method: PUT
+  url: http://localhost:8080/productos/3
+  body:
+    type: json
+    data: |-
+      {
+        "nombre": "Teclado Redragon Kumara",
+        "descripcion": "Teclado mecánico RGB",
+        "precio": 54990,
+        "stock": 18,
+        "categoria": "Periféricos"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,25 @@
+info:
+  name: Actualizar cliente
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://localhost:8080/clientes/3
+  body:
+    type: json
+    data: |-
+      {
+        "nombre": "Carlos Andrés",
+        "apellido": "Rojas",
+        "correo": "carlos.rojas@gmail.com",
+        "telefono": "977381225",
+        "direccion": "Coronel"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,25 @@
+info:
+  name: Crear producto
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://localhost:8080/productos
+  body:
+    type: json
+    data: |-
+      {
+        "nombre": "Webcam Logitech C920",
+        "descripcion": "Webcam Full HD con micrófono",
+        "precio": 69990,
+        "stock": 8,
+        "categoria": "Accesorios"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
